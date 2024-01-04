@@ -4,11 +4,21 @@ clc; clear all;
 % Ensayar el uso de los comandos: rand, unidrnd, unifrnd, tabulate
 
 a = 1; b = 10;
-X = (b-a)*rand + a;
+aleatorio = randi([a, b]);
 
-%vector1 = [v, e, a];
-vector2 = ['v', 'e', 'a'];
-permutaciones = perms(vector2);
+disp("Un numero aleatorio entre " + a + " y " + b + " es:" + aleatorio)
+
+vector = ['v', 'e', 'a'];
+nCombinaciones = nchoosek(length(vector), 2);
+permutaciones = perms(vector);
+
+disp(" ");
+disp("El numero de combinaciones que se pueden conseguir con las letras" + ...
+    "v, e y a tomados de 2 en 2 son: " + nCombinaciones);
+
+disp(" ");
+disp("Las permutaciones que se pueden conseguir con las letras v, e y a son:");
+disp(permutaciones);
 
 % Dado un vector de datos conseguir la lista de combinaciones y permutaciones
 
@@ -37,6 +47,7 @@ for i = 1:numLanz
     resLanz = [resLanz x];
 end
 
+disp(" ");
 disp("Los resultados obtenidos en el lanzamiento de " + numLanz + " dados es:");
 disp(resLanz);
 

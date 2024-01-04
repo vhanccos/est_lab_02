@@ -1,5 +1,5 @@
 clc; clear;
-disp("____________________________________________________________");
+disp("________________________________________________________________________________");
 disp("Ejercicio 1:");
 
 % Suponga que la demanda mensual de un bien de consumo se distribuye
@@ -19,7 +19,7 @@ disp("La probabilidad de que la demanda no supere los 500 Kg es de " + P)
 % inversion
 %norminv(0.898)
 
-disp("____________________________________________________________");
+disp("________________________________________________________________________________");
 disp("Ejercicio 2:");
 
 %Se lanza un dado 7 veces y contamos el numero de 5 que 
@@ -33,7 +33,7 @@ Y = binopdf(X,n,p);
 
 disp("La probabilidadd de obtener tres cincos es " + Y);
 
-disp("____________________________________________________________");
+disp("________________________________________________________________________________");
 disp("Ejercicio 3:");
 
 %Si la probabilidad de que una persona cualquiera que
@@ -51,7 +51,17 @@ P = poisspdf(18,l);
 disp("La probabilidadd de que 18 de las 300 personas" + ...
     " sufran de insolación es " + P);
 
-disp("____________________________________________________________");
 
+disp("________________________________________________________________________________");
+disp("Ejercicio 4:");
 
+%Calcular x, tal que F(x) = 0.3085 con µ =10 y σ = 2. Para la solución se usa el comando "inv” de la
+%siguiente manera: M = norminv(0.3085,10,2)
 
+Y=0.3085;
+u=10;
+o=2;
+M=norminv(Y,u,o);
+disp("El valor de x es de: "+M);
+
+disp("________________________________________________________________________________");
